@@ -7,6 +7,7 @@ import Spinner from "./components/Spinner";
 import MovieCard from "./components/MovieCard";
 import { useDebounce } from "react-use";
 import { updateSearchCount, getTrendingMovies } from "./appwrite";
+import RankingToast from "./components/RankingToast";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 
@@ -83,6 +84,7 @@ function App() {
 
   return (
     <>
+      <RankingToast />
       <main className="pattern">
         <div className="wrapper">
           <header>
