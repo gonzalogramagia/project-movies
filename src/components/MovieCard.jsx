@@ -1,3 +1,7 @@
+import noMovie from "../assets/no-movie.png";
+import starIcon from "../assets/star.svg";
+
+
 const MovieCard = ({
   movie: { title, vote_average, poster_path, release_date, original_language },
 }) => {
@@ -8,14 +12,14 @@ const MovieCard = ({
           src={
             poster_path
               ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-              : "/no-movie.png"
+              : noMovie
           }
         />
         <div className="mt-4">
           <h3 className="text-left">{title}</h3>
           <div className="content">
             <div className="rating">
-              <img src="star.svg" alt="Star Icon" />
+              <img src={starIcon} alt="Star Icon" />
               <p>{vote_average ? vote_average.toFixed(1) : "N/A"}</p>
             </div>
 
